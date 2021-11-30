@@ -1,10 +1,8 @@
 import { useState } from 'react';
 
-// import PropTypes from 'prop-types';
-// import shortid from 'shortid';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../redux/Phonebook/phonebook-selectors';
-import actions from '../../redux/Phonebook/phonebook-actions';
+import  { addContact } from '../../redux/Phonebook/phonebook-operations';
 
 import s from './ContactForm.module.css';
 
@@ -37,7 +35,7 @@ function ContactForm() {
       resetForm();
       return alert(`${name} is already in the directory`);
     }
-    dispatch(actions.addContact({ name, number }));
+    dispatch(addContact({ name, number }));
     resetForm();
   };
 
@@ -82,8 +80,6 @@ function ContactForm() {
   );
 }
 
-// ContactForm.propTypes = {
-//   submit: PropTypes.func.isRequired,
-// };
+
 
 export default ContactForm;

@@ -1,12 +1,13 @@
-// import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { getFiltredContacts } from '../../redux/Phonebook/phonebook-selectors';
-import actions from '../../redux/Phonebook/phonebook-actions'; //../../redux/Phonebook/phonebook-actions'
+import { deleteContact } from '../../redux/Phonebook/phonebook-operations';
+
 import s from './ContactList.module.css';
 
 const ContactList = () => {
   const contacts = useSelector(getFiltredContacts);
   const dispatch = useDispatch();
+
 
   return (
     <div className={s.container}>
@@ -19,7 +20,7 @@ const ContactList = () => {
             <button
               type="button"
               className={s.button}
-              onClick={() => dispatch(actions.deleteContact(id))}
+              onClick={() => dispatch(deleteContact(id))}
             >
               delete
             </button>
@@ -30,16 +31,4 @@ const ContactList = () => {
   )
 };
   
-
-// ContactList.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     }),
-//   ),
-//   onDeleteContact: PropTypes.func,
-// };
-
 export default ContactList;
