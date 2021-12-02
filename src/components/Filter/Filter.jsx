@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { getFilter } from '../../redux/Phonebook/phonebook-selectors';
-import { changeFilter } from '../../redux/Phonebook/phonebook-actions';
+import { getFilter } from '../../redux/phonebook/phonebook-selectors';
+import { changeFilter } from '../../redux/phonebook/phonebook-actions';
 
 import PropTypes from 'prop-types';
 import s from './Filter.module.css';

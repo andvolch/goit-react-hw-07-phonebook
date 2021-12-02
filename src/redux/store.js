@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 
-import { filterReducer } from './Phonebook/phonebook-filter-reducer';
-import contactsSlice  from './Phonebook/phonebook-reduser';
+import { filterReducer } from './phonebook/phonebook-filter-reducer';
+import contactsSlice  from './phonebook/phonebook-reduser';
 
 
 export const store = configureStore({

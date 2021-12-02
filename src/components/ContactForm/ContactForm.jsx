@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from '../../redux/Phonebook/phonebook-selectors';
-import  { addContact } from '../../redux/Phonebook/phonebook-operations';
+import { getContacts } from '../../redux/phonebook/phonebook-selectors';
+import  { addContact } from '../../redux/phonebook/phonebook-operations';
 
 import s from './ContactForm.module.css';
 
